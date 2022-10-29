@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block title%}
+    employee detail page
+{%endblock%}
+
+
+{%block body%}
+    <h3> welcome to detail page</h3>
+
+    <h4>
+        my name is : <span style="color:pink;">{{employee.emp_name}}</span>
+
+    </h4>
+    <h4>
+        my salary is : <span style="color:pink;">{{employee.emp_salary}}</span>
+
+    </h4>
+    <h4>
+        my email is : <span style="color:pink;">{{employee.emp_email}}</span>
+
+    </h4>
+
+    <h4>  my designation is : <span style="color:pink;">{{employee.emp_designation}}</span> </h4>
+{%endblock%}

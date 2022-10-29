@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block title%}
+    employee delete page
+{%endblock%}
+
+
+{%block body%}
+    <h3> welcome to delete page</h3>
+    <h4> are you sure , do you want to delete the <span style="color:red;">{{employee.emp_name}}</span> data</h4>
+    <form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Delete"></form>
+{%endblock%}

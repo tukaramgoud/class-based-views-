@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{%block title%}
+    employee list page
+{%endblock%}
+
+
+{%block body%}
+    <h3> welcome to list page</h3>
+     <table class="table table-bordered table-white table-hover mt-4">
+       <thead>
+          <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>salary</th>
+            <th>email</th>
+            <th>Designation</th>
+            <th>Actions</th>
+          </tr>
+       </thead>
+       {%for i in employee%}
+       <tbody>
+          <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.emp_name}}</td>
+            <td>{{i.emp_salary}}</td>
+            <td>{{i.emp_name}}</td>
+            <td>{{i.emp_designation}}</td>
+            <td>
+                <a href="{%url 'update' i.id %}"><input type="submit" value="Edit" class="btn btn-info"></a>
+                <a href="{%url 'delete' i.id %}"><input type="submit" value="delete" class="btn btn-danger"></a>
+            </td>
+          </tr>
+       </tbody>
+       {%endfor%}
+     </table>
+<a href="{%url 'create'%}"><input type="submit" value="create employee"></a>
+{%endblock%}
